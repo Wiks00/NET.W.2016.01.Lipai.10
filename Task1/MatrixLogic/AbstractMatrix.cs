@@ -16,7 +16,7 @@ namespace Task1
         protected T[,] structualStrorage;
         protected int emptyMatrixSize = 4;
 
-        public abstract T this[int i , int j] {get; set;}
+        public abstract T this[int i, int j] { get; set; }
         public int Size => structualStrorage.GetLength(0);
         public int Length => structualStrorage.Length;
 
@@ -28,8 +28,8 @@ namespace Task1
             var temp = PropertyChanged;
             temp?.Invoke(this, e);
             Console.Beep();
-            if(PropertyChanged.GetInvocationList().Length == 0)
-                PropertyChanged(this,e);
+            if (PropertyChanged.GetInvocationList().Length == 0)
+                PropertyChanged(this, e);
         }
 
         public override int GetHashCode()
@@ -67,7 +67,7 @@ namespace Task1
 
         public static bool IsSquareMatrix(AbstractMatrix<T> matrix)
         {
-            return CheckForСompatibility(matrix.AsEnumerable());
+            return matrix.structualStrorage.GetLength(0) == matrix.structualStrorage.GetLength(1);
         }
 
         public static bool IsDiagonalMatrix(AbstractMatrix<T> matrix)
@@ -78,7 +78,7 @@ namespace Task1
             {
                 for (int j = 0; i < matrix.Size; j++)
                 {
-                    if (i != j && !matrix[i, j].Equals(default(T))) 
+                    if (i != j && !matrix[i, j].Equals(default(T)))
                         return false;
 
                     if (i == j && !matrix[i, j].Equals(diagonalValue))
@@ -116,14 +116,14 @@ namespace Task1
 
         public AbstractMatrix<T> Accept(IMatrixVisitor<T> visitor, AbstractMatrix<T> other)
         {
-            return visitor.Visit((dynamic)this , other);
+            return visitor.Visit((dynamic) this, other);
         }
 
         protected static bool CheckForСompatibility(IEnumerable<T> collection)
         {
             double collectionSize = Math.Sqrt(collection.Count());
-            int truncate = (int)collectionSize;
-            int fract = (int)Math.Ceiling(collectionSize - truncate);
+            int truncate = (int) collectionSize;
+            int fract = (int) Math.Ceiling(collectionSize - truncate);
 
             return collectionSize <= 1 || !fract.Equals(0);
         }

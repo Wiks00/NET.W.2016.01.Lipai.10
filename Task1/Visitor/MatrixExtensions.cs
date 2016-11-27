@@ -8,7 +8,7 @@ namespace Task1
 {
     public static class MatrixExtensions
     {
-        public static AbstractMatrix<T> Sum<T>(this AbstractMatrix<T> matrix , AbstractMatrix<T> other) where T : struct 
+        public static AbstractMatrix<T> Sum<T>(this AbstractMatrix<T> matrix, AbstractMatrix<T> other) where T : struct
         {
             var visitor = new CalculateMatrixSumVisitor<T>();
             return matrix.Accept(visitor, other);

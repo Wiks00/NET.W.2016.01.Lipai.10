@@ -12,7 +12,7 @@ namespace Task1
         public int J { get; private set; }
         public T Value { get; private set; }
 
-        public MatrixEventArgs(int i, int j , T value)
+        public MatrixEventArgs(int i, int j, T value)
         {
             I = i;
             J = j;

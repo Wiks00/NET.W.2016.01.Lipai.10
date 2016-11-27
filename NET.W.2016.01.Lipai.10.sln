@@ -5,6 +5,12 @@ VisualStudioVersion = 14.0.24720.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MatrixLogic", "Task1\MatrixLogic.csproj", "{5A12F489-90AF-4C97-8354-849507286399}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BinarySearchTree", "BinarySearchTree\BinarySearchTree.csproj", "{E7D34D9B-04A9-4BA4-A21A-13C0BB381061}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BinarySearchTree.Tests", "BinarySearchTree.Tests\BinarySearchTree.Tests.csproj", "{E301BFCF-ECCB-4D7D-855D-1B97109773AB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MatrixLogic.Tests", "MatrixLogic.Tests\MatrixLogic.Tests.csproj", "{27AA1602-388A-4672-813E-14543FE22BBE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +21,18 @@ Global
 		{5A12F489-90AF-4C97-8354-849507286399}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5A12F489-90AF-4C97-8354-849507286399}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5A12F489-90AF-4C97-8354-849507286399}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E7D34D9B-04A9-4BA4-A21A-13C0BB381061}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E7D34D9B-04A9-4BA4-A21A-13C0BB381061}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E7D34D9B-04A9-4BA4-A21A-13C0BB381061}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E7D34D9B-04A9-4BA4-A21A-13C0BB381061}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E301BFCF-ECCB-4D7D-855D-1B97109773AB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E301BFCF-ECCB-4D7D-855D-1B97109773AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E301BFCF-ECCB-4D7D-855D-1B97109773AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E301BFCF-ECCB-4D7D-855D-1B97109773AB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{27AA1602-388A-4672-813E-14543FE22BBE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{27AA1602-388A-4672-813E-14543FE22BBE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{27AA1602-388A-4672-813E-14543FE22BBE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{27AA1602-388A-4672-813E-14543FE22BBE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

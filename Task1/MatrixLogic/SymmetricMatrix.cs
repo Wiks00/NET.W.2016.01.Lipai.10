@@ -8,7 +8,6 @@ namespace Task1
 {
     public class SymmetricMatrix<T> : AbstractMatrix<T>, ICloneable where T : struct
     {
-
         public override T this[int i, int j]
         {
             get
@@ -57,9 +56,9 @@ namespace Task1
             if (ReferenceEquals(collection, null))
                 throw new ArgumentNullException();
 
-            double collectionSize = (1 + Math.Sqrt(1 - 4 * (-collection.Count() * 2))) / 2;
-            int truncate = (int)Math.Floor(collectionSize);
-            int fract = (int)Math.Ceiling(collectionSize - truncate);
+            double collectionSize = (1 + Math.Sqrt(1 - 4*(-collection.Count()*2)))/2;
+            int truncate = (int) Math.Floor(collectionSize);
+            int fract = (int) Math.Ceiling(collectionSize - truncate);
 
             if (fract != 0)
                 throw new ArgumentException();
@@ -113,10 +112,9 @@ namespace Task1
             {
                 structualStrorage[i, i] = value;
             }
-
         }
 
-        private void SetSymmetricValue(int i , int j ,T value)
+        private void SetSymmetricValue(int i, int j, T value)
         {
             structualStrorage[i, j] = value;
             structualStrorage[j, i] = value;

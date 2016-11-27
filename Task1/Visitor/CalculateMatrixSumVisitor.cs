@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace Task1
 {
-    public class CalculateMatrixSumVisitor<T> : IMatrixVisitor<T> where T : struct 
+    public class CalculateMatrixSumVisitor<T> : IMatrixVisitor<T> where T : struct
     {
         public SquareMatrix<T> Visit(SquareMatrix<T> matrix, AbstractMatrix<T> other)
         {
-            if(ReferenceEquals(matrix,null) || ReferenceEquals(other,null))
+            if (ReferenceEquals(matrix, null) || ReferenceEquals(other, null))
                 throw new ArgumentNullException();
 
             if (matrix.Size != other.Size)
@@ -33,7 +33,7 @@ namespace Task1
 
             AbstractMatrix<T> temp;
 
-            if(other is SymmetricMatrix<T> || other is DiagonalMatrix<T>)
+            if (other is SymmetricMatrix<T> || other is DiagonalMatrix<T>)
                 temp = new SymmetricMatrix<T>();
             else
                 temp = new SquareMatrix<T>();
@@ -65,7 +65,7 @@ namespace Task1
             return temp;
         }
 
-        private void ByPass(AbstractMatrix<T> lhs, AbstractMatrix<T> rhs , AbstractMatrix<T> result)
+        private void ByPass(AbstractMatrix<T> lhs, AbstractMatrix<T> rhs, AbstractMatrix<T> result)
         {
             for (int i = 0; i < lhs.Size; i++)
             {

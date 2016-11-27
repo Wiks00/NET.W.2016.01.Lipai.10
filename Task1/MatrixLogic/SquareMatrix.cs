@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Task1
 {
-    public class SquareMatrix<T> : AbstractMatrix<T> , ICloneable  where T : struct
+    public class SquareMatrix<T> : AbstractMatrix<T>, ICloneable where T : struct
     {
         public override T this[int i, int j]
         {
@@ -23,7 +23,7 @@ namespace Task1
                     throw new ArgumentOutOfRangeException();
 
                 structualStrorage[i, j] = value;
-                NotifyPropertyChanged(this,new MatrixEventArgs<T>(i,j,value));
+                NotifyPropertyChanged(this, new MatrixEventArgs<T>(i, j, value));
             }
         }
 
@@ -36,11 +36,11 @@ namespace Task1
         {
             if (length <= 0)
                 throw new ArgumentOutOfRangeException();
-            structualStrorage = new T[length, length];           
+            structualStrorage = new T[length, length];
         }
 
         public SquareMatrix(params T[] values) : this(values.AsEnumerable())
-        {            
+        {
         }
 
         public SquareMatrix(T[,] values) : this(values.Cast<T>())
@@ -55,7 +55,7 @@ namespace Task1
             if (!CheckForСompatibility(collection))
                 throw new ArgumentException();
 
-            int size = (int)Math.Sqrt(collection.Count());
+            int size = (int) Math.Sqrt(collection.Count());
 
             structualStrorage = new T[size, size];
 
@@ -90,7 +90,5 @@ namespace Task1
         {
             return Clone();
         }
-
-
     }
 }

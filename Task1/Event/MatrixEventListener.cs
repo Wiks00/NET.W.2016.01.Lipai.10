@@ -23,6 +23,5 @@ namespace Task1.Event
         {
             Console.WriteLine("Value in {1},{2} index changed to: {0}", eventArgs.Value, eventArgs.I, eventArgs.J);
         }
-
     }
 }

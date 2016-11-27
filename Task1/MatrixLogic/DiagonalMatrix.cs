@@ -44,7 +44,6 @@ namespace Task1
 
             structualStrorage = new T[length, length];
             SetDiagonal(value);
-
         }
 
         public void SetDiagonal(T value)
@@ -53,7 +52,6 @@ namespace Task1
             {
                 structualStrorage[i, i] = value;
             }
-
         }
 
         public DiagonalMatrix<T> Clone()
